@@ -1,0 +1,22 @@
+uuid: bb7f603d-b240-4e7d-8345-de38ec8797f2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - honey
+_core:
+  default_config_hash: MIVtvasG4qikTK3AXDGUcu35Os209T3f9bCn1lB0660
+id: tabs
+theme: honey
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

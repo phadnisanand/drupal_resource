@@ -1,0 +1,25 @@
+name: 'Block quote left'
+description: 'Two-column layout with a blockquote on the left and free content on the right.'
+status: stable
+group: DrupalEasy
+props:
+  type: object
+  required:
+    - quote
+  properties:
+    quote:
+      type: string
+      title: 'Quote text'
+      description: 'Plain text quote displayed in a blockquote element.'
+      examples:
+        - 'Simplicity is the ultimate sophistication.'
+    quote_width:
+      type: integer
+      title: 'Quote column width'
+      description: 'Width of the left column as a percentage.'
+      examples:
+        - 40
+slots:
+  content:
+    title: 'Right column content'
+    description: 'Formatted text or any renderable content.'

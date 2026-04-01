@@ -1,0 +1,25 @@
+uuid: 1a6ef484-05be-4258-bcc7-6496b8aa156f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e5cf3675-142f-404e-b474-cf0b2f0aab55'
+  module:
+    - block_content
+  theme:
+    - honey
+id: honey_hoursandlocationblock
+theme: honey
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:e5cf3675-142f-404e-b474-cf0b2f0aab55'
+settings:
+  id: 'block_content:e5cf3675-142f-404e-b474-cf0b2f0aab55'
+  label: 'Hours and location'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

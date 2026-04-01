@@ -1,0 +1,44 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.0.x/core/modules/sdc/src/metadata.schema.json
+name: Author card
+status: stable
+description: 'A mid-century modern author profile card with geometric styling.'
+props:
+  type: object
+  properties:
+    initials:
+      type: string
+      title: Initials
+      description: 'Author initials to display in the avatar circle.'
+      default: 'JD'
+    name:
+      type: string
+      title: Name
+      description: 'Full name of the author.'
+      default: 'Jane Doe'
+    title:
+      type: string
+      title: Title
+      description: 'Professional title or role.'
+      default: 'Digital Design Specialist'
+    x_url:
+      type: string
+      title: X URL
+      description: 'URL to X (Twitter) profile.'
+      default: ''
+    mastodon_url:
+      type: string
+      title: Mastodon URL
+      description: 'URL to Mastodon profile.'
+      default: ''
+    linkedin_url:
+      type: string
+      title: LinkedIn URL
+      description: 'URL to LinkedIn profile.'
+      default: ''
+slots:
+  bio:
+    title: Biography
+    description: 'Short biography content (under 50 words recommended).'
+  profile_photo:
+    title: Profile Photo
+    description: 'Profile photo image to display in the avatar circle. Falls back to initials if not provided.'

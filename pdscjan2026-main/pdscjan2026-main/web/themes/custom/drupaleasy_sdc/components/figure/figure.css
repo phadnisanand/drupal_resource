@@ -1,0 +1,50 @@
+[data-component-id="drupaleasy_sdc:figure"]figure {
+    margin: 2em auto;
+    text-align: center;
+    background: #fff;
+    display: table;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  [data-component-id="drupaleasy_sdc:figure"]figure.rounded-corners {
+    border-radius: 0.75rem;
+  }
+  [data-component-id="drupaleasy_sdc:figure"]figure img,
+  [data-component-id="drupaleasy_sdc:figure"]figure canvas {
+    display: block;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+  }
+  [data-component-id="drupaleasy_sdc:figure"]figure:hover img,
+  [data-component-id="drupaleasy_sdc:figure"]figure:hover canvas.lower-canvas {
+    transform: scale(1.03);
+  }
+  [data-component-id="drupaleasy_sdc:figure"] figcaption {
+    padding: 0.8em;
+    font-style: italic;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    display: block;
+    caption-side: bottom;
+  }
+  [data-component-id="drupaleasy_sdc:figure"] figcaption.guacamole {
+    color: #fff;
+    background-color: #88b04b;
+  }
+  [data-component-id="drupaleasy_sdc:figure"] figcaption.salsa {
+    color: #fff;
+    background-color: #D62828;
+  }
+  [data-component-id="drupaleasy_sdc:figure"] figcaption.queso {
+    color: #000;
+    background-color: #FFD447;
+  }
+  [data-component-id="drupaleasy_sdc:figure"] figcaption.brand {
+    color: #000;
+    background-color: #eeeeee;
+    background-color: var(--primary-color, #eeeeee);
+  }
+  [data-component-id="drupaleasy_sdc:figure"] figcaption.super-size {
+    font-size: 2rem;
+  }

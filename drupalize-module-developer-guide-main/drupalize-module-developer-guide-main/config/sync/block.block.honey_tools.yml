@@ -1,0 +1,27 @@
+uuid: 6721e745-3014-44f6-af77-9a56af4be759
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - honey
+_core:
+  default_config_hash: wu5OeDOG_K_X0XOIMoX3mUEv_9IZDQFxGtgnXOHzn5Y
+id: honey_tools
+theme: honey
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

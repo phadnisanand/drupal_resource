@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      title: Recetas
+      exposed_form:
+        options:
+          submit_button: Applicar
+      filters:
+        field_ingredients_target_id:
+          expose:
+            label: 'Encontrar recetas usando...'

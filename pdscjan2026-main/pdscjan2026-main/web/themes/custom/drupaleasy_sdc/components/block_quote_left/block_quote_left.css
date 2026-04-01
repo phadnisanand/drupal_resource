@@ -1,0 +1,17 @@
+.block-quote-left {
+  display: flex;
+  gap: 1rem;
+}
+
+  .block-quote-left__quote {
+    flex: 0 0 40%;
+    flex: 0 0 var(--quote-width, 40%);
+  }
+
+  .block-quote-left__quote blockquote {
+      margin: 0;
+    }
+
+  .block-quote-left__content {
+    flex: 1 1 auto;
+  }

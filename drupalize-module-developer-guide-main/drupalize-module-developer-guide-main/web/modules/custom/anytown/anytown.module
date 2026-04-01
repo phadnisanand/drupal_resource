@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains anytown.module.
+ */
+
+/**
+ * Implements hook_theme().
+ * Must always add any variables passing from controller to twig through here.
+ */
+function anytown_theme($existing, $type, $theme, $path) {
+  return [
+    'anytown_weather' => [
+      'variables' => [
+        'location' => NULL,
+        'forecast' => NULL,
+        'style' => NULL,
+      ],
+    ],
+  ];
+}

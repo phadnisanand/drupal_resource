@@ -1,0 +1,22 @@
+uuid: 9df87f26-05ac-486a-b956-e535a94a35d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ingredients
+id: taxonomy_term.ingredients.status
+field_name: status
+entity_type: taxonomy_term
+bundle: ingredients
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

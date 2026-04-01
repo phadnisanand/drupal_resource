@@ -1,0 +1,12 @@
+{%
+  set classes = [
+    'chip',
+    'chip--color-' ~ color|clean_class,
+    dismissible ? 'chip--dismissible',
+  ]
+%}
+<div {{ attributes.addClass(classes) }}>
+{% block content %}
+  {{ content }}
+{% endblock %}
+</div>

@@ -1,0 +1,60 @@
+[data-component-id="drupaleasy_sdc:figure"] {
+  &figure {
+    margin: 2em auto;
+    text-align: center;
+    background: #fff;
+    display: table;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &figure.rounded-corners {
+    border-radius: 12px;
+  }
+
+  &figure img,
+  &figure canvas {
+    display: block;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &figure:hover img,
+  &figure:hover canvas.lower-canvas {
+    transform: scale(1.03);
+  }
+
+  & figcaption {
+    padding: 0.8em;
+    font-style: italic;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+    caption-side: bottom;
+  }
+
+  & figcaption.guacamole {
+    color: #fff;
+    background-color: #88b04b;
+  }
+
+  & figcaption.salsa {
+    color: #fff;
+    background-color: #D62828;
+  }
+
+  & figcaption.queso {
+    color: #000;
+    background-color: #FFD447;
+  }
+
+  & figcaption.brand {
+    color: #000;
+    background-color: var(--primary-color, #eeeeee);
+  }
+
+  & figcaption.super-size {
+    font-size: 2rem;
+  }
+}

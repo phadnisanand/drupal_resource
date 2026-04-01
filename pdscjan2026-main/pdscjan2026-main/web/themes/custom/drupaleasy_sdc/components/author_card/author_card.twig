@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Template for the Author card component.
+ *
+ * Available variables:
+ * - initials: Author initials for the avatar.
+ * - name: Full name of the author.
+ * - title: Professional title or role.
+ * - x_url: URL to X (Twitter) profile.
+ * - mastodon_url: URL to Mastodon profile.
+ * - linkedin_url: URL to LinkedIn profile.
+ * - bio: Slot for biography content.
+ * - profile_photo: Slot for profile photo image.
+ * - attributes: HTML attributes for the component wrapper.
+ */
+#}
+<div{{ attributes.addClass('author-card') }}>
+  <div class="author-card__header">
+    <div class="author-card__shape author-card__shape--1"></div>
+    <div class="author-card__shape author-card__shape--2"></div>
+    <div class="author-card__shape author-card__shape--3"></div>
+  </div>
+
+  <div class="author-card__avatar-container">
+    <div class="author-card__avatar{% if profile_photo %} author-card__avatar--photo{% endif %}">
+      {% if profile_photo %}
+        {{ profile_photo }}
+      {% else %}
+        {{ initials }}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="author-card__content">
+    <h2 class="author-card__name">{{ name }}</h2>
+    <p class="author-card__title">{{ title }}</p>
+
+    <div class="author-card__divider">
+      <div class="author-card__divider-line"></div>
+      <div class="author-card__divider-circle"></div>
+      <div class="author-card__divider-line"></div>
+    </div>
+
+    {% if bio %}
+      <div class="author-card__bio">
+        {{ bio }}
+      </div>
+    {% endif %}
+
+    <div class="author-card__social-links">
+      {% if x_url %}
+        <a href="{{ x_url }}" class="author-card__social-link author-card__social-link--x" title="X (Twitter)">𝕏</a>
+      {% endif %}
+      {% if mastodon_url %}
+        <a href="{{ mastodon_url }}" class="author-card__social-link author-card__social-link--mastodon" title="Mastodon">
+          <span>M</span>
+        </a>
+      {% endif %}
+      {% if linkedin_url %}
+        <a href="{{ linkedin_url }}" class="author-card__social-link author-card__social-link--linkedin" title="LinkedIn">in</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="author-card__corner-accent">
+    <div class="author-card__corner-circle author-card__corner-circle--1"></div>
+    <div class="author-card__corner-circle author-card__corner-circle--2"></div>
+    <div class="author-card__corner-triangle"></div>
+  </div>
+</div>

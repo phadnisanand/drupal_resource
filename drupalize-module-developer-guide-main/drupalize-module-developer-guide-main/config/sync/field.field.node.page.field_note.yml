@@ -1,0 +1,21 @@
+uuid: 00badfaf-c9d2-474a-ab70-6396076ffdf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - node.type.page
+  module:
+    - field_permission_example
+id: node.page.field_note
+field_name: field_note
+entity_type: node
+bundle: page
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_permission_example_field_note

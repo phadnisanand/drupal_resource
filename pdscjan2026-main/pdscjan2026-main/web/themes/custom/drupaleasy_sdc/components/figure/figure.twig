@@ -1,0 +1,6 @@
+<figure {{ attributes.addClass(figure_classes) }}>
+  {{ image }}
+  {% if caption %}
+    <figcaption class="{{ figure_caption_classes|join(' ') }}">{{ caption }}</figcaption>
+  {% endif %}
+</figure>

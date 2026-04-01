@@ -1,0 +1,39 @@
+name: deradix
+description: "deradix theme based on <a href='https://www.drupal.org/project/radix' target='_blank'>Radix 6.x</a> and Bootstrap 5.x"
+screenshot: screenshot.png
+'alt text': 'deradix theme screenshot'
+core_version_requirement: ^11
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+'interface translation project': deradix
+'interface translation server pattern': themes/custom/deradix/translations/%language.po
+regions:
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
+  header: Header
+  sidebar_left: 'Sidebar left'
+  content: Content
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - deradix/style
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+libraries-extend:
+  core/drupal.ajax:
+    - deradix/drupal.ajax
+  core/drupal.checkbox:
+    - deradix/drupal.checkbox
+  core/drupal.message:
+    - deradix/drupal.message
+  core/drupal.progress:
+    - deradix/drupal.progress
+  clientside_validation_jquery/cv.jquery.validate:
+    - deradix/jquery.validate
+version: 6.0.2
+project: radix
+datestamp: 1746711574
+generator: 'radix_starterkit:6.0.2'

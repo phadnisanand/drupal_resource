@@ -1,0 +1,20 @@
+[data-component-id="drupaleasy_sdc:chip"] {
+  &.chip {
+    display: inline-block;
+    padding: 0.25rem;
+  }
+
+  &.chip--color-primary {
+    background-color: darkblue;
+    color: white;
+  }
+
+  &.chip--color-secondary {
+    background-color: lightgray;
+    color: black;
+  }
+
+  &.chip--dismissed {
+    display: none;
+  }
+}

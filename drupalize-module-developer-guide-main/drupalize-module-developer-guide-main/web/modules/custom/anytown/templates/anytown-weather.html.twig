@@ -1,0 +1,7 @@
+<div class="anytown-weather">
+  <h1>Weather for {{ location }}</h1>
+  <p>Forecast: {{ forecast }}</p>
+  {% if style == 'extended' %}
+    <p><strong>Extended forecast:</strong> Looking ahead to next week we expect some snow.</p>
+  {% endif %}
+</div>

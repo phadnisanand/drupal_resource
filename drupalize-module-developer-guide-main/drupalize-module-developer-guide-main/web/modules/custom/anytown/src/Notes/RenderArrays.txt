@@ -1,0 +1,46 @@
+Notes from Drupalize Renders Arrays tutorial:
+https://drupalize.me/tutorial/what-are-render-arrays
+
+What are properties and elements?
+- All renderable arrays have 2 kinds of key/value pairs:
+Elements and Properties
+- Properties:
+Begin with "#" and the values of these properties determine how the array will be rendered to a string.
+- 2 types of Properties:
+1. Value Properties (most common):
+Examples: #title, #prefix, #weight
+Value props store strings, integers, booleans and complex data types that contain info to be used in a
+template or influence how an element is rendered to HTML.
+2. Callable Properties:
+Examples: #pre_render, #post_render
+These props hold references to PHP callables. At specific points during the rendering process these functions/methods
+will be called and can alter the process or current state.
+- Elements:
+All keys that don't begin with "#" and the values should be renderable arrays themselves containing properties to
+instruct Drupal's theming system how to render the data.
+Elements are used to describe individual sections within the array (children arrays) and represent data.
+
+Basic format of a render array:
+- Structure of render array is similar to structure of HTML dom, which contains various elements such as H1, p tags
+that can be nested within other HTML tags and all these tags can have attributes that provide additional info
+about each tag.
+
+3 main ways to describe content as a renderable array:
+1. #markup => <p>Hello World!</p>
+Provides valid HTML markup directly.
+2. #theme => table
+Markup provided by a template file (twig). Where the name of the twig template matches the call of the #theme (except
+substituting "_" in call for "-" in twig). Ex: "basic-page.html.twig" becomes "basic-page" when called as value for #theme.
+3. #type => managed_file
+Provides data and properties for a specific type of element. Transformed to #markup or #theme.
+Shortcuts for writing more complex elements.
+
+How are properties defined?
+- Some props are valid for any element, For the rest, determine if it's a #type, #theme or #markup element then refer to:
+#markup - consult documentation
+#theme - props relate to template file variables (check corresponding twig)
+#type - determined by the #type value's definition. Consult element type's documentation
+
+Summary:
+- Render arrays consist of nested elements where each element represents a bit of data. That data is described using
+properties. The props are then interpreted by the renderer in order to convert the content of the array to HTML.

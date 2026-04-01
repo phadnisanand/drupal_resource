@@ -1,0 +1,23 @@
+uuid: a3cf8dd2-7120-4d2a-87c2-44524092340d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_repository_url
+  module:
+    - link
+    - user
+id: user.user.field_repository_url
+field_name: field_repository_url
+entity_type: user
+bundle: user
+label: 'Repository URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

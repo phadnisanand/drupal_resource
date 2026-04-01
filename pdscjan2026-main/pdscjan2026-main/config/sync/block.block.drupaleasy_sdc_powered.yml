@@ -1,0 +1,22 @@
+uuid: b69f2427-647d-4dce-a30e-505ff779696f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupaleasy_sdc
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: drupaleasy_sdc_powered
+theme: drupaleasy_sdc
+region: footer
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

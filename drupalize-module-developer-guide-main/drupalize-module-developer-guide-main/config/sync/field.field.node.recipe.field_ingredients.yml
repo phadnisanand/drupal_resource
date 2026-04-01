@@ -1,0 +1,29 @@
+uuid: e408a1b9-8d88-4560-9c0d-dd0ce2474b91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingredients
+    - node.type.recipe
+    - taxonomy.vocabulary.ingredients
+id: node.recipe.field_ingredients
+field_name: field_ingredients
+entity_type: node
+bundle: recipe
+label: Ingredients
+description: 'Enter ingredients that site visitors might want to search for'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ingredients: ingredients
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

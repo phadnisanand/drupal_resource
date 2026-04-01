@@ -1,0 +1,79 @@
+Notes from Drupalize Renders Arrays tutorial:
+https://drupalize.me/tutorial/concept-dependency-injection
+https://www.youtube.com/shorts/mbJzwKiE1IU
+https://www.youtube.com/watch?v=DpMGEhwuuyA
+
+Dependency refers to a class in your code.
+Instead of initializing an object in a method, we pass it as an argument/parameter, all that really means is we are passing objects to other objects.
+So the place we create the object is done in a separate place from where you use the object (creates dependency).
+In most simple form, this happens via classes constructor.
+Main advantage is it leads to greater flexibility b/c we don't dictate which specific instance of a class it has to use.
+
+How is dependency injection used in Drupal?
+- It enables modules to request services like the db or current user service w/o knowing specifics. This in turn allows Drupal to determine details
+based on configuration such as database type.
+
+Constructor injection:
+- For constructor dependency injection, any class being passed into the constructor must be an instance of, extend, or implement the same class or
+interface specified in the constructor’s type hint.
+- Dependencies (services) are supplied as arguments to a class constructor.
+- For example, a service querying a third-party API might depend on the http_client service for making HTTP requests, the cache service for caching
+responses, and the logger service for logging errors.
+Here's an example:
+class ExampleService {
+  protected $cache;
+  protected $http_client;
+  protected $logger;
+
+  public function __construct($cache, $http_client, $logger) {
+    $this->cache = $cache;
+    $this->http_client = $http_client;
+    $this->logger = $logger;
+  }
+}
+- To initialize ExampleService, each dependency must be instantiated.
+Example:
+$cache = new Cache();
+$http_client = new Guzzle();
+$logger = new Logger();
+$example = new ExampleService($cache, $http_client, $logger);
+- When accessing a service via the service container, dependencies are automatically initialized. This is the preferred approach in Drupal modules.
+ Example:
+  $example = Drupal::container('example_service');
+
+Constructor injection via a create() factory method
+- Drupal frequently uses a static create() factory method for constructor injection. This is the most common pattern in Drupal modules.
+- Example:
+$example = ExampleService::create($container);
+- Important to know how to use this as opposed to Autowire trait for 2 reasons:
+1. There are some services that accept configuration when they're initialized and while it's possible to hardcode that configuration using Autowire, if you need
+dynamically calculate the configuration you're going to need to use create() factory method approach.
+2. Autowiring is new to Drupal and a lot existing code still use create() approach.
+
+Setting injection:
+- Setter injection uses setter methods to set dependencies after object instantiation. This method is less common but useful in specific scenarios.
+
+Dependency injection vs Inheritance (OOP):
+- Are very different OOP principles.
+- Inheritance = "Is-a" Relationship:
+You use inheritance when your class extends another class — meaning it is a specialized version of it. Inheritance expresses hierarchical structure
+and shared behavior:
+  class Animal {}
+  class Dog extends Animal {}
+A Dog is an Animal.
+It inherits methods and properties from its parent.
+- Dependency Injection = "Has-a" Relationship:
+Dependency injection expresses collaboration — one class relies on another, but isn’t defined by it:
+  class Dog {
+    protected $toy;
+
+    public function __construct(Toy $toy) {
+      $this->toy = $toy;
+    }
+  }
+Here, Dog has a Toy.
+It’s not extending Toy; it’s using it as a dependency.
+
+Autowiring for Dependency Injection:
+- Can use class "use Drupal\Core\DependencyInjection\AutowireTrait;" in Drupal classes/services to autowire and use less code when injecting services
+into your classes.

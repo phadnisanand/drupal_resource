@@ -1,0 +1,27 @@
+uuid: 148c2e0d-bfd0-4a7f-868c-f11beb309321
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - honey
+_core:
+  default_config_hash: 7bt64iLE7PT14fPPk8hHbcoRTxzB7TGp__Z9a8_nRR8
+id: honey_account_menu
+theme: honey
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

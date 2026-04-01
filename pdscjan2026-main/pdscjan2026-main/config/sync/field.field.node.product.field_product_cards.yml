@@ -1,0 +1,31 @@
+uuid: 85adcb51-3036-48fa-8b3d-43c57a8f2149
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_cards
+    - node.type.product
+    - paragraphs.paragraphs_type.card
+  module:
+    - entity_reference_revisions
+id: node.product.field_product_cards
+field_name: field_product_cards
+entity_type: node
+bundle: product
+label: 'Product cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+    negate: 0
+    target_bundles_drag_drop:
+      card:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,22 @@
+uuid: 32c686f1-9e56-4583-a5a3-a03eb36d9fea
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - drupaleasy_sdc
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: drupaleasy_sdc_help
+theme: drupaleasy_sdc
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

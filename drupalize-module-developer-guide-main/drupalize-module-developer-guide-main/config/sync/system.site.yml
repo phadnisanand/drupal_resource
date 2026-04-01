@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: e3d1a155-2548-4b2d-b61c-f4d34cc603b9
+name: 'Anytown Farmers Market'
+mail: info@example.com
+slogan: 'Farm Fresh Food'
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

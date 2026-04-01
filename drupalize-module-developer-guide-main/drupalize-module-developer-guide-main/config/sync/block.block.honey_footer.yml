@@ -1,0 +1,27 @@
+uuid: 8bf1adb3-50ed-4d8c-a950-10dd73154a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - honey
+_core:
+  default_config_hash: m5GBjhR8NP4mQWg_EFkbqQTJ0FfqGwR9SRCSl1ViF8A
+id: honey_footer
+theme: honey
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

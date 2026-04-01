@@ -1,0 +1,23 @@
+uuid: 1137efc3-f116-4121-a88b-c66afa40cdfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - drupaleasy_sdc
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: drupaleasy_sdc_search_form_wide
+theme: drupaleasy_sdc
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

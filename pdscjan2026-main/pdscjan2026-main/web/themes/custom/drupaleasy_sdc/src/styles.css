@@ -1,0 +1,29 @@
+@import 'variables.css';
+
+body {
+  & p {
+    color: var(--primary-color);
+    user-select: none;
+  }
+}
+
+.card {
+  &--featured {
+    background: gold;
+    color: color(display-p3 0.64331 0.19245 0.16771);
+  }
+}
+
+body div {
+  color: red;
+}
+
+.button {
+  @mixin button-style #28a745 pink;
+}
+
+header {
+  width: 100%;
+  height: 10rem;
+  background-image: url(../images/drupaleasy-logo.svg);
+}

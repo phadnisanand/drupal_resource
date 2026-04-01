@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for DrupalEasy SDC demo module.
+ */
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function drupaleasy_sdc_demo_preprocess_node(array &$variables): void {
+  $node = $variables['node'];
+
+  $variables['content']['my_component'] = [
+    '#type' => 'component',
+    '#component' => 'drupaleasy_sdc:chip',
+    '#props' => [
+      'color' => 'primary',
+      'dismissible' => TRUE,
+    ],
+    '#slots' => [
+      'content' => [
+        '#markup' => 'Type: <strong>' . Html::escape($node->bundle()) . '</strong>',
+        '#allowed_tags' => ['strong'],
+      ],
+    ],
+  ];
+}

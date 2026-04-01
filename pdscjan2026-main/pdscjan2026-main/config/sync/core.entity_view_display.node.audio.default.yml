@@ -1,0 +1,29 @@
+uuid: 0fa2b7b5-90ca-46f7-aebf-8da7b823e7a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.audio.field_audio_urls
+    - node.type.audio
+  module:
+    - html5_audio
+    - user
+id: node.audio.default
+targetEntityType: node
+bundle: audio
+mode: default
+content:
+  field_audio_urls:
+    type: html5_audio_formatter
+    label: above
+    settings:
+      autoplay: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

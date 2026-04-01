@@ -1,0 +1,16 @@
+anytown.weather_page:
+  # The URL path where this page will be displayed. {style} represents a
+  # placeholder and will be populated by whatever is entered into that position
+  # of the URL. Its value is passed the controller's build method.
+  path: '/weather/{style}'
+  defaults:
+    # Title of the page used for things like <title> tag.
+    _title: 'Weather at the market'
+    # Defines which method, on which class, should be called to retrieve the
+    # content of the page.
+    _controller: '\Drupal\anytown\Controller\AnytownController::build'
+    # Default value for {style} if it's not present.
+    style: 'short'
+  requirements:
+    # What permissions a user needs to have in order to view this page.
+    _permission: 'view weekly weather'

@@ -1,0 +1,19 @@
+parameters:
+  drupaleasy_repositories.dry_run: false
+
+services:
+  plugin.manager.drupaleasy_repositories:
+    class: Drupal\drupaleasy_repositories\DrupaleasyRepositories\DrupaleasyRepositoriesPluginManager
+    parent: default_plugin_manager
+
+  drupaleasy_repositories.service:
+    class: Drupal\drupaleasy_repositories\DrupaleasyRepositoriesService
+    # The logger.factory dependency was added by Mike on Feb 24 on-the-fly as an
+    # example. This dependency is not in the handout. Additional dependencies to
+    # be added to this service class should be added after it.
+    arguments: ['@plugin.manager.drupaleasy_repositories', '@config.factory', '@logger.factory', '@entity_type.manager', '%drupaleasy_repositories.dry_run%']
+  Drupal\drupaleasy_repositories\DrupaleasyRepositoriesService: '@drupaleasy_repositories.service'
+
+  Drupal\drupaleasy_repositories\Hook\DrupaleasyRepositoriesHooks:
+    class: Drupal\drupaleasy_repositories\Hook\DrupaleasyRepositoriesHooks
+    autowire: TRUE

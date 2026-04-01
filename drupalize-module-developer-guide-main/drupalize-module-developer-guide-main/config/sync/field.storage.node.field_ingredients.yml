@@ -1,0 +1,20 @@
+uuid: 46630d7d-e3c0-4aa6-8a7b-206248b4fcfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ingredients
+field_name: field_ingredients
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

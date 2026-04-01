@@ -1,0 +1,36 @@
+name: pmd-winter-2026
+recipe: drupal11
+config:
+  php: "8.3"
+  via: apache:2.4
+  database: mysql:8.0
+  composer_version: 2-latest
+  drush: ^13
+  webroot: web
+  xdebug: false
+services:
+  appserver:
+    config:
+      php: php.ini
+    overrides:
+      environment:
+        XDEBUG_MODE: debug,develop
+        DRUSH_OPTIONS_URI: "http://pmd-winter-2026.lndo.site"
+  dba:
+    type: phpmyadmin
+tooling:
+  xdebug-on:
+    service: appserver
+    description: Enable Xdebug.
+    user: root
+    cmd:
+      - docker-php-ext-enable xdebug && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 2 && echo "Xdebug On" && tput sgr 0 && echo
+
+  xdebug-off:
+    service: appserver
+    description: Disable Xdebug.
+    user: root
+    cmd:
+      - rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 1 && echo "Xdebug Off" && tput sgr 0 && echo

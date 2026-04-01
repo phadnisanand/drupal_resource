@@ -1,0 +1,5 @@
+# Schema for the configuration files of the deradix theme.
+
+deradix.settings:
+  type: theme_settings
+  label: 'deradix settings'

@@ -1,0 +1,5 @@
+name: 'DrupalEasy SDC demo'
+type: module
+description: 'Module to demonstrate adding an SDC to a render array.'
+package: DrupalEasy
+core_version_requirement: ^10 || ^11

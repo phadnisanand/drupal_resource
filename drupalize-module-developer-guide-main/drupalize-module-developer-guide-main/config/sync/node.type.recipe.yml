@@ -1,0 +1,17 @@
+uuid: ebe31dc2-8bf7-487c-b192-80af46594e28
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Recipe
+type: recipe
+description: 'Recipe submitted by a vendor'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,288 @@
+/**
+ * @file
+ * Styles for the Author card component.
+ * Mid-century modern design with geometric shapes and bold colors.
+ */
+
+.author-card {
+  width: 500px;
+  max-width: 100%;
+  background: #f9f6f0;
+  overflow: hidden;
+  box-shadow:
+    12px 12px 0 rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: 3px solid #2a2922;
+  font-family: Georgia, serif;
+
+  /* Header with bold color block */
+  &__header {
+    height: 140px;
+    background: #d4956c;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Geometric shapes in header */
+  &__shape {
+    position: absolute;
+
+    &--1 {
+      width: 200px;
+      height: 200px;
+      background: #e8b17f;
+      border-radius: 50%;
+      top: -100px;
+      right: -60px;
+    }
+
+    &--2 {
+      width: 0;
+      height: 0;
+      border-left: 80px solid transparent;
+      border-right: 0 solid transparent;
+      border-bottom: 140px solid #bf7e52;
+      left: 0;
+      top: 0;
+    }
+
+    &--3 {
+      width: 60px;
+      height: 140px;
+      background: #a66847;
+      bottom: 0;
+      left: 140px;
+      transform: skewX(-15deg);
+    }
+  }
+
+  /* Avatar container */
+  &__avatar-container {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    z-index: 10;
+  }
+
+  /* Avatar with atomic starburst */
+  &__avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #4a7c7e;
+    border: 8px solid #f9f6f0;
+    box-shadow:
+      0 0 0 3px #2a2922,
+      8px 8px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    font-weight: bold;
+    color: #f9f6f0;
+    position: relative;
+    overflow: hidden;
+
+    /* Atomic starburst effect */
+    &::before {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background:
+        linear-gradient(0deg, transparent 48%, #e8a566 48%, #e8a566 52%, transparent 52%),
+        linear-gradient(45deg, transparent 48%, #e8a566 48%, #e8a566 52%, transparent 52%),
+        linear-gradient(90deg, transparent 48%, #e8a566 48%, #e8a566 52%, transparent 52%),
+        linear-gradient(135deg, transparent 48%, #e8a566 48%, #e8a566 52%, transparent 52%);
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    /* Photo variant - remove background and adjust styles */
+    &--photo {
+      background: transparent;
+      padding: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  /* Content area */
+  &__content {
+    padding: 90px 40px 40px 40px;
+  }
+
+  /* Author name */
+  &__name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2a2922;
+    margin: 0 0 6px 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+
+  /* Author title */
+  &__title {
+    font-size: 14px;
+    color: #d4956c;
+    margin: 0 0 24px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* Atomic age divider */
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 24px 0;
+  }
+
+  &__divider-line {
+    flex: 1;
+    height: 3px;
+    background: #2a2922;
+  }
+
+  &__divider-circle {
+    width: 12px;
+    height: 12px;
+    background: #d4956c;
+    border-radius: 50%;
+    border: 2px solid #2a2922;
+    flex-shrink: 0;
+  }
+
+  /* Biography text */
+  &__bio {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #3a3429;
+    margin: 0 0 32px 0;
+
+    p {
+      margin: 0 0 1em 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /* Social links container */
+  &__social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Social link base styles */
+  &__social-link {
+    width: 50px;
+    height: 50px;
+    background: #4a7c7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #f9f6f0;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    position: relative;
+    border: 3px solid #2a2922;
+
+    /* X (Twitter) - circle */
+    &--x {
+      border-radius: 50%;
+      background: #d4956c;
+    }
+
+    /* Mastodon - rotated square */
+    &--mastodon {
+      border-radius: 0;
+      background: #4a7c7e;
+      transform: rotate(45deg);
+
+      span {
+        transform: rotate(-45deg);
+        display: block;
+      }
+
+      &:hover {
+        transform: rotate(45deg) scale(1.1);
+      }
+    }
+
+    /* LinkedIn - square */
+    &--linkedin {
+      border-radius: 0;
+      background: #e8a566;
+    }
+
+    /* Hover state */
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: 2px solid #4a7c7e;
+      outline-offset: 2px;
+    }
+  }
+
+  /* Corner accent decorations */
+  &__corner-accent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+  }
+
+  &__corner-circle {
+    position: absolute;
+    border-radius: 50%;
+
+    &--1 {
+      width: 60px;
+      height: 60px;
+      background: #d4956c;
+      bottom: 10px;
+      right: 10px;
+      opacity: 0.3;
+    }
+
+    &--2 {
+      width: 30px;
+      height: 30px;
+      background: #4a7c7e;
+      bottom: 50px;
+      right: 50px;
+      opacity: 0.4;
+    }
+  }
+
+  &__corner-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-bottom: 40px solid rgba(42, 41, 34, 0.1);
+    bottom: 0;
+    right: 0;
+  }
+}

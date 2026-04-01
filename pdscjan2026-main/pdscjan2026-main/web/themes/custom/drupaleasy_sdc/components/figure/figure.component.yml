@@ -1,0 +1,32 @@
+name: Figure
+status: stable
+description: Displays media images using HTML Figure element.
+group: DrupalEasy
+libraryOverrides:
+  js:
+    fabric.min.js: {}
+    figure.js: {}
+props:
+  type: object
+  properties:
+    figure_classes:
+      type: array
+      items:
+        type: string
+      title: Figure classes
+      description: An array of utility classes for the figure tag.
+      examples: [['red', 'blue'], ['featured']]
+    figure_caption_classes:
+      type: array
+      items:
+        type: string
+      title: Figure caption classes
+      description: An array of utility classes for the figcaption tag.
+      examples: [['acme-primary', 'subtle']]
+slots:
+  image:
+    title: Image
+    description: The image to be displayed.
+  caption:
+    title: Caption
+    description: A visible caption for the image.

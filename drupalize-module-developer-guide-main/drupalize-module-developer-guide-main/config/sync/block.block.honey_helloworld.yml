@@ -1,0 +1,20 @@
+uuid: 298e4d79-18fb-45a2-9a86-3ba6b217a72d
+langcode: en
+status: true
+dependencies:
+  module:
+    - anytown
+  theme:
+    - honey
+id: honey_helloworld
+theme: honey
+region: sidebar_first
+weight: -7
+provider: null
+plugin: anytown_hello_world
+settings:
+  id: anytown_hello_world
+  label: 'Hello World'
+  label_display: visible
+  provider: anytown
+visibility: {  }

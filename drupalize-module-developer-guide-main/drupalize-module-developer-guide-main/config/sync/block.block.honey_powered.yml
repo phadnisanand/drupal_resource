@@ -1,0 +1,22 @@
+uuid: 02de622e-987b-4f57-a01a-b51e77ad45e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - honey
+_core:
+  default_config_hash: kISpYRmn9qqUYa3qClR9OIBX7UirsdqGOTXMjpWyn18
+id: honey_powered
+theme: honey
+region: sidebar_first
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by'
+  label_display: visible
+  provider: system
+visibility: {  }

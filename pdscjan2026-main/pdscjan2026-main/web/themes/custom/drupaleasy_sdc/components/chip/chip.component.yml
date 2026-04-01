@@ -1,0 +1,28 @@
+name: Chip
+status: stable
+description: Chip SDC similar to drupal.org documentation.
+group: DrupalEasy
+libraryOverrides:
+  dependencies:
+    - core/once
+props:
+  type: object
+  required: ['color']
+  properties:
+    dismissible:
+      type: boolean
+      title: Dismissible
+      description: If true, users can dismiss the chip by clicking on it.
+    color:
+      type: string
+      title: Color
+      description: Background color to use for the chip, either primary or secondary.
+      enum: ['primary', 'secondary']
+      meta:enum:
+        primary: Primary color
+        secondary: Secondary color
+      examples: ['primary']
+slots:
+  content:
+    title: Content
+    description: Content of the chip.

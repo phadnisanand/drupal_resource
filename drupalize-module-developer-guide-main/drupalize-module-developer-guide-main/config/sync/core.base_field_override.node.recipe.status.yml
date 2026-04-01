@@ -1,0 +1,22 @@
+uuid: 6b355c5f-f0a0-4cd0-9230-8ebc3325ec58
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+id: node.recipe.status
+field_name: status
+entity_type: node
+bundle: recipe
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

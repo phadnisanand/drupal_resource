@@ -1,0 +1,17 @@
+uuid: 799a1875-cf51-405c-85ed-30a3fa04072a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Repository
+type: repository
+description: 'Used for storing Git repository metadata.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: true

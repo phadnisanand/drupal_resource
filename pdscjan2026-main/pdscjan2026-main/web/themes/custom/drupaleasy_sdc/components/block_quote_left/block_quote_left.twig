@@ -1,0 +1,14 @@
+<div{{ attributes.addClass('block-quote-left') }}
+     style="--quote-width: {{ quote_width|default(40) }}%;">
+  <div class="block-quote-left__quote">
+    <blockquote>
+      {{ quote }}
+    </blockquote>
+  </div>
+
+  <div class="block-quote-left__content">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</div>

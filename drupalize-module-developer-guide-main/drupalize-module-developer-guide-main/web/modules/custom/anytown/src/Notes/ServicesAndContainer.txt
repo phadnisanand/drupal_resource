@@ -1,0 +1,28 @@
+Notes from Drupalize Renders Arrays tutorial:
+https://drupalize.me/tutorial/concept-services-and-container
+
+
+Drupal core includes services for doing common things like accessing the database, sending email, or making HTTP requests.
+Generally speaking, almost everything that Drupal does is actually done by one of these objects. In Drupal, these objects
+are called services and in order to make working with them easier, they are primarily accessed through the service container.
+
+What are services?
+- A service in Drupal is a PHP object that encapsulates functionality or business logic in flexible and reusable fashion.
+- Services provide modular, reusable functionalities for easy integration into custom modules.
+
+The service container:
+- The service container in Drupal acts as a repository and manager for all services.
+- Accessing a service can be done through:
+Dependency injection: Injecting services into a class via the constructor (dependency injection).
+Static methods: In procedural code (like in hook implementations), access services using static methods such as \Drupal::currentUser()
+or \Drupal::service('{SERVICE_ID}').
+
+To define a new services, modules must:
+- Define a PHP interface for the service that dictates the publicly-available methods that code using the service can call.
+- Provide one or more classes that implement that interface and perform the service's custom logic.
+- Give the service a unique name and describe it in a MODULE_NAME.services.yml file.
+
+Summary:
+ Services are reusable objects that perform specific tasks and that the service container manages these services efficiently.
+ Dev's writing custom modules can put their application-specific business logic into a custom service isolating it from the
+ Drupal-specific integration code, making it easier to test and maintain.

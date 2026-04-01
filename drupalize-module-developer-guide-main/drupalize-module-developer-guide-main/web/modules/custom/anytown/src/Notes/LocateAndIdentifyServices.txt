@@ -1,0 +1,25 @@
+Notes from Drupalize Renders Arrays tutorial:
+https://drupalize.me/tutorial/locate-and-identify-existing-services
+
+Find services on api.drupal.org:
+- https://api.drupal.org/api/drupal/services/11.x
+
+Use Devel to list current site's services:
+- Drupal's api doesn't list services from contrib or custom modules so this method would be an option in those cases.
+- Must have Devel module installed then run:
+drush devel:services
+
+Locate services definitions in files:
+- Once you know name of a service, if you want to figure out the PHP class that is associated with it or the service's
+arguments, you need to search for the service's name in .yml files.
+- Defined as *.services.yml (where * = name of module)
+
+What does this service do?
+- Use your IDE to explore the class associated with the service and see which PHP interface the service implements.
+- For example, the http_client service (found in core/core.services.yml) is provided by GuzzleHttp\Client class which
+implements \GuzzleHttp\ClientInterface. This gives us info to dig into and learn more and find additional documentation.
+
+Use Cases:
+- Frequently used in Controllers for business logic and o figure out what information to display on the page. This might
+include querying for a list of entities, getting information about the current user, or accessing saved configuration
+- Best practice to always use DI to supply services

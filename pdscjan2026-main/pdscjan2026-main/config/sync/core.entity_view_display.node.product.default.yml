@@ -1,0 +1,30 @@
+uuid: ae6f423e-0e61-43c2-8f49-72f86922417b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.field_product_cards
+    - node.type.product
+  module:
+    - entity_reference_revisions
+    - user
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  field_product_cards:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

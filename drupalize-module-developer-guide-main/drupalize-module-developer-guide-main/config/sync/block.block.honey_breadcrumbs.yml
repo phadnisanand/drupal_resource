@@ -1,0 +1,22 @@
+uuid: 4d30763d-4f00-4f85-a1b4-5ed67ba536aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - honey
+_core:
+  default_config_hash: iJMy5vBFegf8B5SYDhSEJUiEJVCLbKYIHsxd7MJAdKY
+id: honey_breadcrumbs
+theme: honey
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
