@@ -1,0 +1,13 @@
+uuid: 68189a87-48b0-4780-8799-a0ad7824c16b
+langcode: en
+status: true
+dependencies:
+  module:
+    - tmdb
+_core:
+  default_config_hash: _Z6JBRXGFGH8wxwm1cnHxOx6oYTIj35vr7rO0v59a5o
+id: update_movie_action
+label: 'Update Movie Details'
+type: node
+plugin: update_movie_action
+configuration: {  }
