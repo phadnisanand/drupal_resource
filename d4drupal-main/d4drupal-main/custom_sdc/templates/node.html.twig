@@ -1,0 +1,18 @@
+<article>
+	<div class="body">
+		{{ content.body }}
+	</div>
+	<div class="tags">
+		{% embed 'custom_sdc:links' with {
+			link: content.field_tags.0['#url']|render,
+			text: content.field_tags.0['#title']
+		} %}
+			{% block link_content %}
+				<a class="red" href="{{ link }}">
+					{{ text }}
+				</a>
+			{% endblock %}
+		{% endembed %}
+
+	</div>
+</article>
