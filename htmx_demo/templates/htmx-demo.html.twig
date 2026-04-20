@@ -1,0 +1,15 @@
+<div>
+  <h2>HTMX Drupal Example</h2>
+
+  <button
+    data-hx-get="{{ path('htmx_demo.data') }}"
+    data-hx-target="#result"
+    data-hx-swap="innerHTML">
+    Load Content
+  </button>
+
+  <div id="result">
+    Initial content...
+  </div>
+</div>
+

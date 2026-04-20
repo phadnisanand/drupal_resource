@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function htmx_demo_theme($existing, $type, $theme, $path) {
+  return [
+    'htmx_demo' => [
+      'template' => 'htmx-demo',
+      'path' => $path . '/templates',
+    ],
+  ];
+}

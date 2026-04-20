@@ -1,0 +1,4 @@
+htmx:
+  js:
+    https://unpkg.com/htmx.org@1.9.10:
+      type: external

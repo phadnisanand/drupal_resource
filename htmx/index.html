@@ -1,0 +1,13 @@
+<script src="https://htmx.org/js/htmx.js"></script>
+
+<!-- The button that triggers the request -->
+<button data-hx-get="https://jsonplaceholder.typicode.com/todos" 
+        data-hx-target="#content-area" 
+        data-hx-swap="outerHTML">
+  Load New Content
+</button>
+
+<!-- The area that will be updated -->
+<div id="content-area">
+  This content will be replaced.
+</div>
