@@ -1,0 +1,6 @@
+app:
+  js:
+    js/app.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

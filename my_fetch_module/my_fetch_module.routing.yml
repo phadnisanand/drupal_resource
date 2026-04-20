@@ -1,0 +1,14 @@
+my-fetch-page:
+  path: '/fetch-page'
+  defaults:
+    _controller: '\Drupal\my_fetch_module\Controller\DataController::page'
+    _title: 'Fetch Example'
+  requirements:
+    _permission: 'access content'
+
+my-fetch-api:
+  path: '/api/my-data'
+  defaults:
+    _controller: '\Drupal\my_fetch_module\Controller\DataController::getData'
+  requirements:
+    _permission: 'access content'

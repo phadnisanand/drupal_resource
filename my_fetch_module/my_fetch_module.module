@@ -1,0 +1,8 @@
+<?php
+function my_fetch_module_theme() {
+  return [
+    'my_fetch_template' => [
+      'template' => 'my-fetch-template',
+    ],
+  ];
+}

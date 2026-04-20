@@ -1,0 +1,5 @@
+name: My Fetch Module
+type: module
+description: 'Fetch API + Twig example'
+core_version_requirement: ^10 || ^11
+package: Custom
