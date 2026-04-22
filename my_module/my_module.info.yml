@@ -1,0 +1,5 @@
+name: 'My Module'
+type: module
+description: 'Custom module with autowired controller and service.'
+core_version_requirement: ^10 || ^11
+package: Custom

@@ -1,0 +1,5 @@
+services:
+  my_module.my_service:
+    class: Drupal\my_module\Service\MyService
+    autowire: true
+    autoconfigure: true
