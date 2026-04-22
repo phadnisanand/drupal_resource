@@ -14,14 +14,9 @@ class MyController extends ControllerBase {
     protected MyService $myService,
   ) {}
 
-  public static function create(ContainerInterface $container): static {
-    return new static(
-      $container->get('my_module.my_service'),
-    );
-  }
 
   public function index(): array {
-    $result = $this->myService->doSomething(49);
+    $result = $this->myService->doSomething(1);
 
     return [
       '#markup' => $result
