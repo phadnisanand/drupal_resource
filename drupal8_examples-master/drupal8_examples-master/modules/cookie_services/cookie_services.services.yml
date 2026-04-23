@@ -1,0 +1,40 @@
+services:
+
+  # Basic example of cookie as a service.
+  cookie_service_simple:
+    class: \Drupal\cookie_services\CookieServiceSimple
+    arguments:
+      - '@request_stack'
+    tags:
+      - { name: 'event_subscriber' }
+
+  # Cookie with more complex data.
+  cookie_service_complex:
+    class: \Drupal\cookie_services\CookieServiceComplexData
+    arguments:
+      - '@request_stack'
+      - '@serialization.json'
+    calls:
+      # Calling setCookieName on construction allows us to reuse this class easily.
+      - ['setCookieName', ['my_cookie_name']]
+    tags:
+      - { name: 'event_subscriber' }
+
+  # Reuse our complex cookie class with a new cookie name.
+  another_cookie_service_complex:
+    class: \Drupal\cookie_services\CookieServiceComplexData
+    arguments:
+      - '@request_stack'
+      - '@serialization.json'
+    calls:
+      - ['setCookieName', ['some_other_cookie']]
+    tags:
+      - { name: 'event_subscriber' }
+
+  # Example custom cache context for our complex cookie data.
+  cache_context.another_cookie_service_complex_city:
+    class: \Drupal\cookie_services\Cache\Context\CookieServiceComplexCacheContext
+    arguments:
+      - '@another_cookie_service_complex'
+    tags:
+      - { name: cache_context }

@@ -1,0 +1,4 @@
+name: Absolute minimum possible theme
+type: theme
+base theme: stable
+core_version_requirement: ^8.8 || ^9
