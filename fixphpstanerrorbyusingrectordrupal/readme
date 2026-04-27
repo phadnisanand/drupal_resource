@@ -23,3 +23,12 @@ https://github.com/acquia/coding-standards-php
 ddev composer require --dev drupal/coder dealerdirect/phpcodesniffer-composer-installer
 ddev exec vendor/bin/phpcs
 ddev exec vendor/bin/phpcbf
+----------------------------------------------------
+
+https://www.tomswebstuff.com/blog/php-8-drupal-compatibility-testing
+https://github.com/PHPCompatibility/PHPCompatibility
+https://metadrop.net/en/articles/updating-drupal-php-8
+
+ddev exec vendor/bin/phpcs -i
+
+ddev exec vendor/bin/phpcs -p ./web/modules/custom --standard=PHPCompatibility --runtime-set testVersion 8.4 --extensions=php,module,install,inc --report-file=modules-php8-compatibility.txt
