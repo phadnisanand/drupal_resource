@@ -11,3 +11,15 @@ ddev composer require --dev rector/rector
 vendor/bin/phpstan analyse
 vendor/bin/rector process
 vendor/bin/phpstan analyse
+
+
+https://drupalize.me/tutorial/how-implement-drupal-code-standards
+https://www.drupal.org/docs/extending-drupal/contributed-modules/contributed-module-documentation/coder/php-codesniffer-command-line-usage
+https://drupalize.me/tutorial/how-implement-drupal-code-standards
+https://eduardotelaya.com/blog/technology/2025-07-21-configure-phpcs-and-phpstan-in-ddev-for-drupal/
+https://github.com/acquia/coding-standards-php
+
+
+ddev composer require --dev drupal/coder dealerdirect/phpcodesniffer-composer-installer
+ddev exec vendor/bin/phpcs
+ddev exec vendor/bin/phpcbf
