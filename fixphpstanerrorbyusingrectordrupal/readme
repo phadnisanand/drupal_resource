@@ -1,0 +1,13 @@
+https://codingadventures.netlify.app/how-to-use-phpstan-on-your-drupal-module-a-practical-example-of-mine/
+https://old.midcamp.org/2024/topic-proposal/tighten-your-drupal-code-using-phpstan
+https://www.drupal.org/docs/develop/development-tools/phpstan/getting-started
+
+ddev exec vendor/bin/phpstan analyse
+ddev exec vendor/bin/rector process
+ddev composer require --dev phpstan/phpstan
+phpstan/extension-installer   mglaman/phpstan-drupal
+phpstan/phpstan-deprecation-rules
+ddev composer require --dev rector/rector
+vendor/bin/phpstan analyse
+vendor/bin/rector process
+vendor/bin/phpstan analyse
